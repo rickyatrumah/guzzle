@@ -11,6 +11,7 @@ class ArrayLogAdapterTest extends \Guzzle\Tests\GuzzleTestCase
         $adapter = new ArrayLogAdapter();
         $adapter->log('test', \LOG_NOTICE, 'localhost');
         $this->assertEquals(array(array('message' => 'test', 'priority' => \LOG_NOTICE, 'extras' => 'localhost')), $adapter->getLogs());
+		print 'test';
     }
 
     public function testClearLog()
